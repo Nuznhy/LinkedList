@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Nikitos/LinkedList/Project1/LinkedList.h
+fstream
+-
+iostream
+-
+
+C:/Users/Nikitos/LinkedList/Project1/Source.cpp
+iostream
+-
+LinkedList.h
+C:/Users/Nikitos/LinkedList/Project1/LinkedList.h
+

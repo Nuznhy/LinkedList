@@ -1,6 +1,6 @@
 #include <iostream>
 #include "LinkedList.h"
-#include <typeinfo>
+
 
 int data_type_check() {
     int a;
@@ -20,17 +20,18 @@ int main() {
     LinkedList list;
     bool bool_switch = true;
     int int_switch;
-    int data;
     int index;
+    std::cout << "\tWelcome To Linked list" << std::endl;
     while (bool_switch) {
-        std::cout << "Welcome To Linked list" << std::endl;
-        std::cout << "Choose what to do?" << std::endl;
-        std::cout << "1. Add Node" << std::endl;
-        std::cout << "2. Delete Node" << std::endl;
-        std::cout << "3. Print List" << std::endl;
-        std::cout << "4. Write to txt" << std::endl;
-        std::cout << "5. Calculate Same" << std::endl;
-        std::cout << "6. Exit" << std::endl;
+        std::cout << "\tChoose what to do?" << std::endl;
+        std::cout << "\t1. Add Node" << std::endl;
+        std::cout << "\t2. Delete Node" << std::endl;
+        std::cout << "\t3. Print List" << std::endl;
+        std::cout << "\t4. Write to txt" << std::endl;
+        std::cout << "\t5. Calculate Same" << std::endl;
+        std::cout << "\t6. Add After Index" << std::endl;
+        std::cout << "\t7. Swap k and j" << std::endl;
+        std::cout << "\t8. Exit" << std::endl;
         int_switch = data_type_check();
 
         switch (int_switch) {
@@ -40,7 +41,7 @@ int main() {
             break;
         }
         case 2: {
-            std::cout << "enter index" << std::endl;
+            std::cout << "Enter Index" << std::endl;
             index = data_type_check();
             list.delete_node(index);
             break;
@@ -58,7 +59,22 @@ int main() {
             break;
             
         }
-        case 6: {
+        case 6:{
+            std::cout << "Enter Index" << std::endl;
+            index = data_type_check();
+            list.add_after_index(index);
+            break;
+        }
+        case 7: {
+            int index_k, index_j;
+            std::cout << "Enter Index k" << std::endl;
+            index_k = data_type_check();
+            std::cout << "Enter Index j" << std::endl;
+            index_j = data_type_check();
+            list.swap(index_k, index_j);
+            break;
+        }
+        case 8: {
             bool_switch = false;
             break;
         }
@@ -68,6 +84,4 @@ int main() {
         }
         }
     }
-
-
 }
